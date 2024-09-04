@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Movie from './movies/movie'
-import './app.css'
+// import './app.css'
 function App() {
 
   return (
