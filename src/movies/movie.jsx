@@ -61,7 +61,7 @@ const Movie = () => {
   }, [search, sortBy, selectedGenre]);
 
   useEffect(() => {
-    // Load favorites from localStorage
+  
     const savedFavorites = JSON.parse(localStorage.getItem("favorites")) || [];
     setFavorites(savedFavorites);
   }, []);
@@ -106,7 +106,7 @@ const Movie = () => {
         }
       );
       setMovies(response.data.results);
-      setSuggestions([]); // Clear suggestions after search submit
+      setSuggestions([]); 
       setNoResults(response.data.results.length === 0 && search.trim() !== "");
     } catch (error) {
       console.error("Error searching movies:", error);
@@ -125,7 +125,7 @@ const Movie = () => {
         }
       );
       setSelectedMovie(response.data);
-      setSuggestions([]); // Clear suggestions when a movie is selected
+      setSuggestions([]); 
       setNoResults(false);
     } catch (error) {
       console.error("Error fetching movie details:", error);
